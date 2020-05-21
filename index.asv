@@ -130,15 +130,15 @@ t.RowName = {'hombre', 'mujer'}
 
 %RABLA VFPN
 f2 = figure('Name','TABLA DE RESULTADOS');
+VFPN = [VP; FN; FP;VN]
 VP =  matrizConfusion(1,1);
 FN = matrizConfusion(1,2);
 FP = matrizConfusion(2,1);
 VN = matrizConfusion(2,2);
-VFPN = [VP; FP; VN; FN]
 
-t2 = uitable('Parent', f2, 'Position', [100 200 400 150], 'Data', VFPN);
-t2.ColumnName={'RESULTADOS'}
-t2.RowName = {'VERDADEROS POSITIVOS'; 'FALSOS POSITIVOS';'VERDADEROS NEGATIVOS';'FALSOS NEGATIVOS'}
+t2 = uitable('Parent', f2, 'Position', [100 200 300 100], 'Data', matrizConfusion);
+t.ColumnName={'hombre','mujer'}
+t.RowName = {'hombre', 'mujer'}
 
 
 
